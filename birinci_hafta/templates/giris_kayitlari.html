@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Giriş Kayıtları{% endblock %}
+{% block content %}
+<header>
+    <link rel="stylesheet" href="{{ url_for('static', filename='giris_kayitlari.css') }}">
+</header>
+<h2>Giriş Kayıtları</h2>
+<table border="1">
+    <tr>
+        <th>Ad Soyad</th>
+        <th>Tarih</th>
+        <th>Giriş Saati</th>
+        <th>Çıkış Saati</th>
+    </tr>
+    {% for kayit in giris_kayitlari %}
+    <tr>
+        <td>{{ kayit.ad_soyad }}</td>
+        <td>{{ kayit.tarih }}</td>
+        <td>{{ kayit.giris_saati }}</td>
+        <td>{{ kayit.cikis_saati }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

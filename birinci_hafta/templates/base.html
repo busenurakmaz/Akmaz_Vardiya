@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Personel Sistemi{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+    
+
+<body>
+    <header>
+        <h1>Akmaz Yazılım Vardiya Denetimi</h1>
+        <nav >
+            <a href="{{ url_for('dashboard') }}">Ana Sayfa</a>
+            <a href="{{ url_for('personel_listesi') }}">Personeller</a>
+            <a href="{{ url_for('giris_kayitlari') }}">Giriş Kayıtları</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

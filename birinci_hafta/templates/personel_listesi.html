@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Personel Listesi{% endblock %}
+{% block content %}
+<header>
+    <link rel="stylesheet" href="{{ url_for('static', filename='personel_listesi.css') }}">
+</header>
+<h2>Personel Listesi</h2>
+<table border="1">
+    <tr>
+        <th>Ad Soyad</th>
+        <th>Departman</th>
+        <th>İşlem</th>
+    </tr>
+    {% for personel in personeller %}
+    <tr>
+        <td>{{ personel.ad_soyad }}</td>
+        <td>{{ personel.departman }}</td>
+        <td>
+            <a href="/personel/duzenle/{{ personel.id }}">Düzenle</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

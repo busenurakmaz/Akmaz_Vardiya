@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Giriş Yap{% endblock %}
+{% block content %}
+<header>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</header>
+<div class="logincss">
+
+<form method="post" action="/login"> <h1>Log In</h1>
+    <label>username</label>
+    <input type="text" name="username" placeholder="Kullanıcı Adı" required>
+    <label>password</label>
+    <input type="password" name="password" placeholder="Şifre" required>
+    <button type="submit">Giriş</button>
+</form></div>
+{% endblock %}

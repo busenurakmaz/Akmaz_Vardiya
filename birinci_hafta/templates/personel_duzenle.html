@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Personel Düzenle{% endblock %}
+{% block content %}
+<header>
+    <link rel="stylesheet" href="{{ url_for('static', filename='personel_duzenle.css') }}">
+</header>
+<h2>Personel Düzenle</h2>
+<form method="post" action="/personel/duzenle/{{ personel.id }}">
+    <input type="text" name="ad_soyad" value="{{ personel.ad_soyad }}" required><br>
+    <input type="text" name="departman" value="{{ personel.departman }}" required><br>
+    <button type="submit">Güncelle</button>
+</form>
+{% endblock %}
