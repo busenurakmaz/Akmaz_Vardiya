@@ -1,0 +1,59 @@
+/* Login Kutusu */
+.logincss {
+    width: 350px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #5a5a5a;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Butonlar */
+.logincss button {
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logincss button:hover {
+    transition: background-color 0.3s ease; 
+    background-color: #b11313;
+}
+h1 {
+    color: red;
+    text-align: center;
+    font-size: 32px;
+}
+label{
+    color:black;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+}
+input{
+    background:rgba(0, 0, 0, 0.3);
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: none;
+    margin-bottom: 20px;
+    color:rgb(255, 255, 255);
+}
+form{
+    display: block;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: birghtness(40%);
+    flex-direction: column;
+    display: flex;
+    gap: 5px;
+}
