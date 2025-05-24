@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<header>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dasboard.css') }}">
+</header>
+<div class="dashboard-container">
+    <h2>Akmaz Yazılım'a Hoş Geldiniz!</h2>
+
+    <div class="welcome-section">
+        <img src="{{ url_for('static', filename='resimler/indir.png') }}" alt="Akmaz Logo" class="logo">
+        <p><strong>Akmaz Yazılım</strong> olarak sizlere en kaliteli yazılım çözümlerini sunmayı amaçlıyoruz. Personel takip sistemimiz ile çalışanlarınızı kolayca yönetin, takip edin ve raporlayın.</p>
+    </div>
+
+    <div class="about-section">
+        <h3>Amacımız</h3>
+        <p>Şirketlerin insan kaynakları süreçlerini dijitalleştirmek ve personel yönetimini daha verimli hale getirmek.</p>
+
+        <h3>Hakkımızda</h3>
+        <p>Akmaz Yazılım, 2024 yılında kurulmuş genç ve dinamik bir yazılım şirketidir. Müşteri memnuniyetini esas alarak geliştirdiğimiz çözümlerle büyümeye devam ediyoruz.</p>
+    </div>
+
+    <div class="quick-links">
+        <h3>Hızlı Erişim</h3>
+        <ul>
+            <li><a href="{{ url_for('personel_listesi') }}">➤ Personel Listesi</a></li>
+            <li><a href="{{ url_for('personel_ekle') }}">➤ Yeni Personel Ekle</a></li>
+            <li><a href="{{ url_for('giris_kayitlari') }}">➤ Giriş Kayıtları</a></li>
+             <li><a href="{{ url_for('vardiya_ata') }}">➤ Vardiya atama</a></li>
+              <li><a href="{{ url_for('vardiya_listesi') }}">➤ Vardiya Listesi</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

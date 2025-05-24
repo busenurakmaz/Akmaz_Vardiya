@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Personel Ekle{% endblock %}
+{% block content %}
+<header>
+    <link rel="stylesheet" href="{{ url_for('static', filename='personel_ekle.css') }}">
+</header>
+<h2>Personel Ekle</h2>
+<form method="post" action="/personel/ekle">
+    <input type="text" name="ad_soyad" placeholder="Ad Soyad" required><br>
+    <input type="text" name="departman" placeholder="Departman" required><br>
+    <button type="submit">Ekle</button>
+</form>
+{% endblock %}

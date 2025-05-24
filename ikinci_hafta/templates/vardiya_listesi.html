@@ -1,0 +1,33 @@
+<header><link rel="stylesheet" href="{{ url_for('static', filename='vardiya_listesi.css') }}"></header>
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Vardiya Listesi</h2>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Personel</th>
+            <th>Tarih</th>
+            <th>Başlangıç</th>
+            <th>Bitiş</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for v in vardiyalar %}
+        <tr>
+            <td>{{ v.personel.ad_soyad }}</td>
+            <td>{{ v.tarih }}</td>
+            <td>{{ v.baslangic }}</td>
+            <td>{{ v.bitis }}</td>
+            <td>
+                <form method="POST" action="{{ url_for('vardiya_sil', vardiya_id=v.id) }}" onsubmit="return confirm('Bu vardiyayı silmek istediğinize emin misiniz?');">
+                    <button type="submit" class="delete-btn">Sil</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

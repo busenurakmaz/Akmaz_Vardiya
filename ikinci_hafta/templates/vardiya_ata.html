@@ -1,0 +1,30 @@
+
+<header><link rel="stylesheet" href="{{ url_for('static', filename='vardiya_ata.css') }}"></header>
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Personel Vardiya Atama</h2>
+
+<form method="POST">
+    <label for="personel_id">Personel:</label>
+    <select name="personel_id" id="personel_id" required>
+        <option value="" disabled selected>Personel seçin</option>
+        {% for p in personeller %}
+            <option value="{{ p.id }}">{{ p.ad_soyad }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="tarih">Tarih:</label>
+    <input type="date" name="tarih" id="tarih" required>
+
+    <label for="vardiya">Vardiya:</label>
+    <select name="vardiya" id="vardiya" required>
+        <option value="" disabled selected>Vardiya seçin</option>
+        <option value="08:00-16:00">08:00 - 16:00</option>
+        <option value="16:00-00:00">16:00 - 00:00</option>
+        <option value="00:00-08:00">00:00 - 08:00</option>
+    </select>
+
+    <button type="submit">Vardiya Ata</button>
+</form>
+{% endblock %}
