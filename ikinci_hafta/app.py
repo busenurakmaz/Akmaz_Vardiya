@@ -265,6 +265,6 @@ def giris_kayitlari():
     return render_template('giris_kayitlari.html', giris_kayitlari=giris_kayitlari)
 
 import os
-if__name__=="__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT",5000)))
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
