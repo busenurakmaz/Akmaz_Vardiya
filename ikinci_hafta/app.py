@@ -264,15 +264,7 @@ def giris_kayitlari():
 
     return render_template('giris_kayitlari.html', giris_kayitlari=giris_kayitlari)
 
-# UYGULAMA BAŞLATMA
-if __name__ == '__main__':
-    if not os.path.exists('site.db'):
-        with app.app_context():
-            db.create_all()
-            if not User.query.first():
-                sifre = generate_password_hash('admin', method='pbkdf2:sha256') 
-                ilk_kullanici = User(name='Admin', email='admin@example.com', password=sifre)
-                db.session.add(ilk_kullanici)
-                db.session.commit()
-                print('İlk kullanıcı oluşturuldu: admin@example.com / admin')
-    app.run(debug=True)
+import os
+if__name__=="__main":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT",5000)))
+
