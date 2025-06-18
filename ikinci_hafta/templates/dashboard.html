@@ -6,6 +6,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='dasboard.css') }}">
 </header>
 <div class="dashboard-container">
+    <div class="quick-links">
+        <h3>Hızlı Erişim</h3>
+        <ul>
+            <li><a href="{{ url_for('personel_listesi') }}">➤ Personel Listesi</a></li>
+            <li><a href="{{ url_for('personel_ekle') }}">➤ Yeni Personel Ekle</a></li>
+            <li><a href="{{ url_for('giris_kayitlari') }}">➤ Giriş Kayıtları</a></li>
+             <li><a href="{{ url_for('vardiya_ata') }}">➤ Vardiya atama</a></li>
+              <li><a href="{{ url_for('vardiya_listesi') }}">➤ Vardiya Listesi</a></li>
+               <li><a href="{{ url_for('register') }}">➤ Yönetici olarak kayıt ol </a></li>
+        </ul>
+    </div>
     <h2>Akmaz Yazılım'a Hoş Geldiniz!</h2>
 
     <div class="welcome-section">
@@ -21,15 +32,6 @@
         <p>Akmaz Yazılım, 2024 yılında kurulmuş genç ve dinamik bir yazılım şirketidir. Müşteri memnuniyetini esas alarak geliştirdiğimiz çözümlerle büyümeye devam ediyoruz.</p>
     </div>
 
-    <div class="quick-links">
-        <h3>Hızlı Erişim</h3>
-        <ul>
-            <li><a href="{{ url_for('personel_listesi') }}">➤ Personel Listesi</a></li>
-            <li><a href="{{ url_for('personel_ekle') }}">➤ Yeni Personel Ekle</a></li>
-            <li><a href="{{ url_for('giris_kayitlari') }}">➤ Giriş Kayıtları</a></li>
-             <li><a href="{{ url_for('vardiya_ata') }}">➤ Vardiya atama</a></li>
-              <li><a href="{{ url_for('vardiya_listesi') }}">➤ Vardiya Listesi</a></li>
-        </ul>
-    </div>
+    
 </div>
 {% endblock %}
