@@ -1,0 +1,130 @@
+/* Genel Sayfa Düzeni */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #c82333;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffebee;
+}
+
+main {
+    padding: 2rem;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kayıt Formu Stilleri */
+.register-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(200, 35, 51, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin: 2rem auto;
+}
+
+.register-container h2 {
+    color: #c82333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.register-container input:focus {
+    outline: none;
+    border-color: #c82333;
+    box-shadow: 0 0 0 3px rgba(200, 35, 51, 0.1);
+}
+
+.register-container button {
+    width: 100%;
+    padding: 14px;
+    background-color: #c82333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.register-container button:hover {
+    background-color: #a71d2a;
+    transform: translateY(-2px);
+}
+
+.auth-redirect {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+}
+
+.auth-redirect a {
+    color: #c82333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-redirect a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Düzen */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+    
+    nav a {
+        margin-right: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .register-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}

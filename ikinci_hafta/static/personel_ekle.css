@@ -1,0 +1,26 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fcfeff; /* Siyah arka plan */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #ff0000; /* Kırmızı başlık */
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #030303;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text
+}
